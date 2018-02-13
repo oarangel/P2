@@ -4,5 +4,7 @@
 
 ## Outside resources
 
+## Code style divergences
+
 ## Notes for instructor
 
