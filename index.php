@@ -35,13 +35,14 @@ require 'logic.php';
         <option value='choose'>Choose one...</option>
         <option value='excellentTip' <?php if ($tipPercentage == 'excellentTip') echo 'SELECTED' ?>>20% Excellent Service</option>
         <option value='goodTip' <?php if ($tipPercentage == 'goodTip') echo 'SELECTED' ?>>18% Good Service</option>
-        <option value='avgTip' <?php if ($tipPercentage == 'avgTip') echo 'SELECTED' ?>>15% Average Service</option>
+        <option value='avgTip' <?php if ($tipPercentage == 'averageTip') echo 'SELECTED' ?>>15% Average Service</option>
     </select>
 
 
     <input type='submit' value='Calculate'>
 
 </form>
+
 
 <footer>
     <a href='http://github.com/oarangel/P2'>View on Github</a>

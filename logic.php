@@ -1,18 +1,27 @@
 <?php
 
-# Version 1
-//if (isset($_GET['searchTerm'])) {
-//    $searchTerm = $_GET['searchTerm'];
-//} else {
-//    $searchTerm = '';
-//}
-
-# Version 2
 $totalAmt = isset($_GET['totalAmt']) ? $_GET['totalAmt'] : '';
 $totalPer = isset($_GET['totalPer']) ? $_GET['totalPer'] : '';
-$tipIncluded = isset($_GET['tipIncluded']) ? true : false;
 $tipPercentage = isset($_GET['tipPercentage']) ? $_GET['tipPercentage'] : '';
 
-var_dump($_GET);
+function calculateSplit($billSplit = 0.0)
+{
+    global $totalAmt;
+    global $totalPer;
+    global $tipPercentage;
+    global $billSplit;
+    If ($tipPercentage = 'excellentTip') {
+        $tipAmt = 1.20;
+    } else if ($tipPercentage = 'goodTip') {
+        $tipAmt = 1.18;
+    } else if ($tipPercentage = 'averageTip') {
+        $tipAmt = 1.15;
+    }  else {
+        $tipAmt = 1.0;
+    }
+    $billSplit = ($totalAmt / $totalPer) * $tipAmt;
+    return $billSplit;
+}
+calculateSplit();
 
-
+echo calculateSplit($totalAmt, $totalAmt);
