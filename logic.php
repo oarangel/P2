@@ -13,6 +13,6 @@ $totalPer = isset($_GET['totalPer']) ? $_GET['totalPer'] : '';
 $tipIncluded = isset($_GET['tipIncluded']) ? true : false;
 $tipPercentage = isset($_GET['tipPercentage']) ? $_GET['tipPercentage'] : '';
 
-
+var_dump($_GET);
 
 

@@ -19,27 +19,24 @@ require 'logic.php';
 <h1>Bill Splitter</h1>
 
 <form method='GET' action='logic.php'>
-
+ <div>
     <label>Enter Bill Amount:
-        <input type='text' name='totalAmt' value='<?=sanitize($totalAmt)?>'>
-    </label><br>
-
+        <input type='text' name='totalAmt' value='<?= sanitize($totalAmt) ?>'>
+    </label>
+ </div>
+ <div>
     <label>Enter Number of Persons:
-        <input type='number' name='totalPer' value='<?=sanitize($totalPer)?>'>
-    </label><br>
-
-    <label> Tip included
-        <input type='checkbox' name='tipIncluded' value='1' <?=($tipIncluded) ? 'checked' : ''?>>
-    </label><br>
-
+        <input type='number' name='totalPer' value='<?= sanitize($totalPer) ?>'>
+    </label>
+ </div>
 
     <label for='tip'>Select Tip Pecentage</label>
     <select name='tipPecentage' id='tipPercentage'>
         <option value='choose'>Choose one...</option>
-        <option value='excellentTip' <?php if ($tipPercentage == 'excellentTip') echo 'SELECTED'?>>20% Excellent Service</option>
-        <option value='goodTip' <?php if ($tipPercentage == 'goodTip') echo 'SELECTED'?>>18% Good Service</option>
-        <option value='avgTip' <?php if ($tipPercentage == 'avgTip') echo 'SELECTED'?>>15% Average Service</option>
-    </select> <br>
+        <option value='excellentTip' <?php if ($tipPercentage == 'excellentTip') echo 'SELECTED' ?>>20% Excellent Service</option>
+        <option value='goodTip' <?php if ($tipPercentage == 'goodTip') echo 'SELECTED' ?>>18% Good Service</option>
+        <option value='avgTip' <?php if ($tipPercentage == 'avgTip') echo 'SELECTED' ?>>15% Average Service</option>
+    </select>
 
 
     <input type='submit' value='Calculate'>
