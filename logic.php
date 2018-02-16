@@ -1,5 +1,6 @@
 <?php
-
+$totalAmt = 100;
+$totalPer = 5;
 $totalAmt = isset($_GET['totalAmt']) ? $_GET['totalAmt'] : '';
 $totalPer = isset($_GET['totalPer']) ? $_GET['totalPer'] : '';
 $tipPercentage = isset($_GET['tipPercentage']) ? $_GET['tipPercentage'] : '';
@@ -19,6 +20,11 @@ function calculateSplit($billSplit = 0.0)
     }  else {
         $tipAmt = 1.0;
     }
+    dump($totalAmt);
+    dump($totalPer);
+    dump($tipAmt);
+    die();
+
     $billSplit = ($totalAmt / $totalPer) * $tipAmt;
     return $billSplit;
 }
