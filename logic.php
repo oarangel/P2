@@ -22,6 +22,5 @@ function calculateSplit($billSplit = 0.0)
     $billSplit = ($totalAmt / $totalPer) * $tipAmt;
     return $billSplit;
 }
-calculateSplit();
 
-echo calculateSplit($totalAmt, $totalAmt);
+echo calculateSplit($totalAmt, $totalAmt,  $tipPercentage);
