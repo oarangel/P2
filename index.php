@@ -4,7 +4,7 @@ require 'logic.php';
 ?>
 
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Bill Splitter</title>
     <meta charset='utf-8'>
@@ -18,20 +18,20 @@ require 'logic.php';
 
 <h1>Bill Splitter</h1>
 
-<form method='GET' action='logic.php'>
+<form method='GET'>
  <div>
     <label>Enter Bill Amount:
-        <input type='text' name='totalAmt' value='<?= sanitize($totalAmt) ?>'>
+        <input type='text' name='totalAmt' value='<?= sanitize($totalAmt) ?>' required/>
     </label>
  </div>
  <div>
     <label>Enter Number of Persons:
-        <input type='number' name='totalPer' value='<?= sanitize($totalPer) ?>'>
+        <input type='text' name='totalPer' value='<?= sanitize($totalPer) ?>'>
     </label>
  </div>
 
-    <label for='tip'>Select Tip Pecentage</label>
-    <select name='tipPecentage' id='tipPercentage'>
+    <label for='tip'>Select Tip Pecentage, if not selected no Tip will be calculated</label>
+    <select name='tipPercentage' id='tipPercentage'>
         <option value='choose'>Choose one...</option>
         <option value='excellentTip' <?php if ($tipPercentage == 'excellentTip') echo 'SELECTED' ?>>20% Excellent Service</option>
         <option value='goodTip' <?php if ($tipPercentage == 'goodTip') echo 'SELECTED' ?>>18% Good Service</option>
@@ -41,9 +41,13 @@ require 'logic.php';
 
     <input type='submit' value='Calculate'>
 
+
 </form>
-
-
+        <h3> Amount per Person is: </h3>
+<?php  if (!empty($_GET)){
+        echo calculateSplit($totalAmt, $totalPer, $tipPercentage);
+        } ?>
+<?php  //echo (calculateSplit($totalAmt, $totalPer, $tipPercentage)); ?>
 <footer>
     <a href='http://github.com/oarangel/P2'>View on Github</a>
 </footer>
