@@ -89,11 +89,11 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="47" column="3" lean-forward="false" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
               <folding>
-                <marker date="1519041955786" expanded="true" signature="92:144" ph="..." />
-                <marker date="1519041955786" expanded="true" signature="1880:1893" ph="..." />
+                <marker date="1519042777678" expanded="true" signature="92:144" ph="..." />
+                <marker date="1519042777678" expanded="true" signature="1848:1861" ph="..." />
               </folding>
             </state>
           </provider>
@@ -228,12 +228,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518523371487</updated>
-      <workItem from="1518523372562" duration="67272000" />
+      <workItem from="1518523372562" duration="67497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67272000" />
+    <option name="totallyTimeSpent" value="67497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="408" y="23" width="1032" height="781" extended-state="0" />
@@ -382,11 +382,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="273">
+          <caret line="47" column="3" lean-forward="false" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
           <folding>
-            <marker date="1519041955786" expanded="true" signature="92:144" ph="..." />
-            <marker date="1519041955786" expanded="true" signature="1880:1893" ph="..." />
+            <marker date="1519042777678" expanded="true" signature="92:144" ph="..." />
+            <marker date="1519042777678" expanded="true" signature="1848:1861" ph="..." />
           </folding>
         </state>
       </provider>

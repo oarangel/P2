@@ -45,11 +45,9 @@ require 'logic.php';
 </form>
 
 <?php if (!empty($_GET)) {
-    echo calculateSplit($totalAmt, $totalPer, $tipPercentage);
+ //   echo calculateSplit($totalAmt, $totalPer, $tipPercentage);
 } ?>
 <?php //echo (calculateSplit($totalAmt, $totalPer, $tipPercentage)); ?>
-
-<h4> Amount per Person is: </h4>
 
 <?php if (!empty($_GET)): ?>
     <div class='famount'>
