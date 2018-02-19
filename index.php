@@ -4,7 +4,7 @@ require 'logic.php';
 ?>
 
 <!DOCTYPE html>
-<html lang='en' xmlns="http://www.w3.org/1999/html">
+<html lang='en'>
 <head>
     <title>Bill Splitter</title>
     <meta charset='utf-8'>
@@ -30,7 +30,7 @@ require 'logic.php';
     </label>
  </div>
 
-    <label for='tip'>Select Tip Pecentage, if not selected no Tip will be calculated</label>
+    <label> Select Tip Pecentage, if not selected no Tip will be calculated</label>
     <select name='tipPercentage' id='tipPercentage'>
         <option value='choose'>Choose one...</option>
         <option value='excellentTip' <?php if ($tipPercentage == 'excellentTip') echo 'SELECTED' ?>>20% Excellent Service</option>
@@ -44,10 +44,10 @@ require 'logic.php';
 
 </form>
 
-<! <?php  if (!empty($_GET)){
+<?php  if (!empty($_GET)){
         echo calculateSplit($totalAmt, $totalPer, $tipPercentage);
         } ?>
-<!<?php  //echo (calculateSplit($totalAmt, $totalPer, $tipPercentage)); ?>
+<?php  //echo (calculateSplit($totalAmt, $totalPer, $tipPercentage)); ?>
 
    <h4> Amount per Person is: </h4>
 
