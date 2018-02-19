@@ -1,15 +1,14 @@
 <?php
 
-# Reminder that the logic.php file should no produce any output/display (which it is currently doing).
-# Also, I don't think you should be submitting your form to logic.php. Please revisit the notes on form
-# design flow: https://github.com/susanBuck/dwa15-spring2018/blob/master/php/forms.md#form-design-flow
+require('Form.php');
 
+use DWA\Form;
 
-# Get the data from the form submission
-$totalAmt = isset($_GET['totalAmt']) ? $_GET['totalAmt'] : '';
-$totalPer = isset($_GET['totalPer']) ? $_GET['totalPer'] : '';
-$tipPercentage = isset($_GET['tipPercentage']) ? $_GET['tipPercentage'] : '1.20';
+$form = new Form($_GET);
 
+$totalAmt = $form->get('totalAmt', '');
+$totalPer = $form->get('totalPer', '');
+$tipPercentage = $form->get('tipPercentage', '1.20');
 
 # Only try and calculate the bill if the form has been submitted
 if (!empty($_GET)) {

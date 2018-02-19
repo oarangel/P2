@@ -1,14 +1,17 @@
 body {
-    padding: 30px;
+    padding: 40px;
 }
 
-.finalamount {
-    border: 1px solid silver;
-    max-width: 500px;
-    margin: 5px;
-    padding: 15px;
+.famount {
+    border: 4px solid silver;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
 }
 
 .title {
-    font-weight: bold;
+    font-weight: bolder;
+}
+.results {
+    font-weight: 900;
 }

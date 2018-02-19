@@ -26,7 +26,7 @@ require 'logic.php';
  </div>
  <div>
     <label>Enter Number of Persons:
-        <input type='text' name='totalPer' value='<?= sanitize($totalPer) ?>'>
+        <input type='text' name='totalPer' value='<?= sanitize($totalPer) ?>' required>
     </label>
  </div>
 
@@ -43,11 +43,22 @@ require 'logic.php';
 
 
 </form>
-        <h3> Amount per Person is: </h3>
-<?php  if (!empty($_GET)){
+
+<! <?php  if (!empty($_GET)){
         echo calculateSplit($totalAmt, $totalPer, $tipPercentage);
         } ?>
-<?php  //echo (calculateSplit($totalAmt, $totalPer, $tipPercentage)); ?>
+<!<?php  //echo (calculateSplit($totalAmt, $totalPer, $tipPercentage)); ?>
+
+   <h4> Amount per Person is: </h4>
+
+    <?php  if (!empty($_GET)): ?>
+        <div class='famount'>
+            <div class ='results'> Amount per Person is: $<?= round(calculateSplit($totalAmt, $totalPer, $tipPercentage)) ?> </div>
+        </div>
+    <?endif ?>
+
+
+
 <footer>
     <a href='http://github.com/oarangel/P2'>View on Github</a>
 </footer>
