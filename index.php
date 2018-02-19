@@ -19,18 +19,18 @@ require 'logic.php';
 <h1>Bill Splitter</h1>
 
 <form method='GET'>
- <div>
-    <label>Enter Bill Amount:
-        <input type='text' name='totalAmt' value='<?= sanitize($totalAmt) ?>' required/>
-    </label>
- </div>
- <div>
-    <label>Enter Number of Persons:
-        <input type='text' name='totalPer' value='<?= sanitize($totalPer) ?>' required>
-    </label>
- </div>
+    <div>
+        <label>Enter Bill Amount:
+            <input type='text' name='totalAmt' value='<?= sanitize($totalAmt) ?>' required/>
+        </label>
+    </div>
+    <div>
+        <label>Enter Number of Persons:
+            <input type='text' name='totalPer' value='<?= sanitize($totalPer) ?>' required>
+        </label>
+    </div>
 
-    <label> Select Tip Pecentage, if not selected no Tip will be calculated</label>
+    <label> Select Tip Percentage, if not selected no Tip will be calculated</label>
     <select name='tipPercentage' id='tipPercentage'>
         <option value='choose'>Choose one...</option>
         <option value='excellentTip' <?php if ($tipPercentage == 'excellentTip') echo 'SELECTED' ?>>20% Excellent Service</option>
@@ -44,19 +44,18 @@ require 'logic.php';
 
 </form>
 
-<?php  if (!empty($_GET)){
-        echo calculateSplit($totalAmt, $totalPer, $tipPercentage);
-        } ?>
-<?php  //echo (calculateSplit($totalAmt, $totalPer, $tipPercentage)); ?>
+<?php if (!empty($_GET)) {
+    echo calculateSplit($totalAmt, $totalPer, $tipPercentage);
+} ?>
+<?php //echo (calculateSplit($totalAmt, $totalPer, $tipPercentage)); ?>
 
-   <h4> Amount per Person is: </h4>
+<h4> Amount per Person is: </h4>
 
-    <?php  if (!empty($_GET)): ?>
-        <div class='famount'>
-            <div class ='results'> Amount per Person is: $<?= round(calculateSplit($totalAmt, $totalPer, $tipPercentage)) ?> </div>
-        </div>
-    <?endif ?>
-
+<?php if (!empty($_GET)): ?>
+    <div class='famount'>
+        <div class='results'> Amount per Person is: $<?= round(calculateSplit($totalAmt, $totalPer, $tipPercentage)) ?> </div>
+    </div>
+<?php endif ?>
 
 
 <footer>
@@ -65,3 +64,4 @@ require 'logic.php';
 
 </body>
 </html>
+
