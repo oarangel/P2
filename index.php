@@ -1,6 +1,7 @@
 <?php
 require 'helpers.php';
 require 'logic.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -38,11 +39,21 @@ require 'logic.php';
         <option value='avgTip' <?php if ($tipPercentage == 'averageTip') echo 'SELECTED' ?>>15% Average Service</option>
     </select>
 
-
-    <input type='submit' value='Calculate'>
-
+    <section>
+    <input type='submit' value='Calculate' class='btn-sm btn-primary'>
+    </section>
 
 </form>
+
+<?php if ($form->hasErrors) : ?>
+    <div class='alert alert-danger'>
+        <ul>
+            <?php foreach ($errors as $error) : ?>
+                <li><?=$error ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
 
 <?php if (!empty($_GET)) {
  //   echo calculateSplit($totalAmt, $totalPer, $tipPercentage);
