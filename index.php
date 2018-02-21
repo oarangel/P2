@@ -39,9 +39,9 @@ require 'logic.php';
         <option value='avgTip' <?php if ($tipPercentage == 'averageTip') echo 'SELECTED' ?>>15% Average Service</option>
     </select>
 
-    <section>
-    <input type='submit' value='Calculate' class='btn-sm btn-primary'>
-    </section>
+    <label>
+        <input type='submit' value='Calculate' class='btn-sm btn-primary'>
+    </label>
 
 </form>
 
@@ -49,28 +49,25 @@ require 'logic.php';
     <div class='alert alert-danger'>
         <ul>
             <?php foreach ($errors as $error) : ?>
-                <li><?=$error ?></li>
+                <li><?= $error ?></li>
             <?php endforeach; ?>
         </ul>
     </div>
+<?php else: ?>
+
+
+    <?php if (!empty($_GET)): ?>
+        <div class='famount'>
+            <div class='results'> Amount per Person is: $<?= $billSplit  ?> </div>
+        </div>
+    <?php endif; ?>
+
 <?php endif; ?>
-
-<?php if (!empty($_GET)) {
- //   echo calculateSplit($totalAmt, $totalPer, $tipPercentage);
-} ?>
-<?php //echo (calculateSplit($totalAmt, $totalPer, $tipPercentage)); ?>
-
-<?php if (!empty($_GET)): ?>
-    <div class='famount'>
-        <div class='results'> Amount per Person is: $<?= round(calculateSplit($totalAmt, $totalPer, $tipPercentage)) ?> </div>
-    </div>
-<?php endif ?>
-
 
 <footer>
     <a href='http://github.com/oarangel/P2'>View on Github</a>
 </footer>
 
+
 </body>
 </html>
-

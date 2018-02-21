@@ -1,8 +1,15 @@
 <?php
 
 require('Form.php');
+require('CalcSplit.php');
+
+use BillSplit\CalcSplit;
+
+
+$billSplit = new CalcSplit();
 
 use DWA\form;
+
 
 $form = new Form($_GET);
 
@@ -19,26 +26,10 @@ if ($form->isSubmitted())
         ]
     );
 
+if (!$form->hasErrors) {
+    $billSplit->getCalcSplit($totalAmt, $totalPer, $tipPercentage);
+}
 
-
-    function calculateSplit($totalAmt, $totalPer, $tipPercentage)
-    {
-
-        if ($tipPercentage == 'excellentTip') {
-            $tipAmt = 1.20;
-        } else if ($tipPercentage == 'goodTip') {
-            $tipAmt = 1.18;
-        } else if ($tipPercentage == 'averageTip') {
-            $tipAmt = 1.15;
-        } else {
-            $tipAmt = 1.0;
-        }
-
-        $billSplit = ($totalAmt / $totalPer) * $tipAmt;
-
-        return $billSplit;
-    }
-//}
 
 
 
