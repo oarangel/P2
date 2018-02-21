@@ -21,27 +21,30 @@ require 'logic.php';
 
 <form method='GET'>
     <div>
-        <label>Enter Bill Amount:
-            <input type='text' name='totalAmt' value='<?= sanitize($totalAmt) ?>' required/>
+        <label>Enter Bill Amount:<input type='text' name='totalAmt' value='<?= sanitize($totalAmt) ?>' required/>
         </label>
     </div>
     <div>
         <label>Enter Number of Persons:
             <input type='text' name='totalPer' value='<?= sanitize($totalPer) ?>' required>
         </label>
+        <p class='ex2'> Minimum number of persons is 2 and Maximun is 20</p>
     </div>
 
-    <label> Select Tip Percentage, if not selected no Tip will be calculated</label>
-    <select name='tipPercentage' id='tipPercentage'>
-        <option value='choose'>Choose one...</option>
-        <option value='excellentTip' <?php if ($tipPercentage == 'excellentTip') echo 'SELECTED' ?>>20% Excellent Service</option>
-        <option value='goodTip' <?php if ($tipPercentage == 'goodTip') echo 'SELECTED' ?>>18% Good Service</option>
-        <option value='avgTip' <?php if ($tipPercentage == 'averageTip') echo 'SELECTED' ?>>15% Average Service</option>
-    </select>
+    <div>
+        <label> Select Tip Percentage </label>
 
-    <label>
-        <input type='submit' value='Calculate' class='btn-sm btn-primary'>
-    </label>
+        <select name='tipPercentage' id='tipPercentage'>
+            <option value='choose'>Choose one...</option>
+            <option value='excellentTip' <?php if ($tipPercentage == 'excellentTip') echo 'SELECTED' ?>>20% Excellent Service</option>
+            <option value='goodTip' <?php if ($tipPercentage == 'goodTip') echo 'SELECTED' ?>>18% Good Service</option>
+            <option value='avgTip' <?php if ($tipPercentage == 'averageTip') echo 'SELECTED' ?>>15% Average Service</option>
+        </select>
+        <p class='ex2'>if not selected, no Tip will be added </p>
+    </div>
+
+    <input type='submit' value='Calculate' class='btn-sm btn-primary'>
+
 
 </form>
 
