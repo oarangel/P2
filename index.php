@@ -53,15 +53,13 @@ require 'logic.php';
             <?php endforeach; ?>
         </ul>
     </div>
-<?php else: ?>
+<?php endif; ?>
 
-
-    <?php if (!empty($_GET)): ?>
-        <div class='famount'>
-            <div class='results'> Amount per Person is: $<?= round($results)  ?> </div>
-        </div>
-    <?php endif; ?>
-
+<?php if (isset($results)) : ?>
+    <h2>Results:</h2>
+    <div class='amount'>
+        <h5>Amount per Person is: $<?= round($results) ?></h5>
+    </div>
 <?php endif; ?>
 
 <footer>

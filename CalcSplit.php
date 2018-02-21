@@ -2,7 +2,6 @@
 
 namespace BillSplits;
 
-
 class CalcSplit
 {
     public $billSplits;
