@@ -58,7 +58,7 @@ require 'logic.php';
 
     <?php if (!empty($_GET)): ?>
         <div class='famount'>
-            <div class='results'> Amount per Person is: $<?= $billSplit  ?> </div>
+            <div class='results'> Amount per Person is: $<?= round($results)  ?> </div>
         </div>
     <?php endif; ?>
 
