@@ -1,5 +1,7 @@
 body {
     padding: 20px;
+    margin: 0 auto;
+    width: 850px;
 }
 
 p {
@@ -12,9 +14,9 @@ p.ex2 {
 
 .amount {
     border: 4px solid darkblue;
-    max-width: 305px;
-    margin: 20px;
-    padding: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .title {
@@ -32,3 +34,8 @@ label {
 form {
     margin-bottom: 20px;
 }
+
+H1 {
+    text-align: center;
+}
+

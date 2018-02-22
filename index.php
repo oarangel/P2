@@ -23,12 +23,13 @@ require 'logic.php';
     <div>
         <label>Enter Bill Amount:<input type='text' name='totalAmt' value='<?= sanitize($totalAmt) ?>' required/>
         </label>
+        <p class='ex2'> Enter integer numbers.</p>
     </div>
     <div>
         <label>Enter Number of Persons:
             <input type='text' name='totalPer' value='<?= sanitize($totalPer) ?>' required>
         </label>
-        <p class='ex2'> Minimum number of persons is 2 and Maximum is 20</p>
+        <p class='ex2'> Minimum number of persons is 2 and Maximum is 20.</p>
     </div>
 
     <div>
@@ -40,7 +41,7 @@ require 'logic.php';
             <option value='goodTip' <?php if ($tipPercentage == 'goodTip') echo 'SELECTED' ?>>18% Good Service</option>
             <option value='avgTip' <?php if ($tipPercentage == 'averageTip') echo 'SELECTED' ?>>15% Average Service</option>
         </select>
-        <p class='ex2'>if not selected, no Tip will be added </p>
+        <p class='ex2'>If not selected, no Tip will be added. </p>
     </div>
 
     <input type='submit' value='Calculate' class='btn btn-primary'>
@@ -59,7 +60,7 @@ require 'logic.php';
 <?php endif; ?>
 
 <?php if (isset($results)) : ?>
-    <h2>Results:</h2>
+    <h6>Final Amount is rounded up</h6>
     <div class='amount'>
         <h5>Amount per Person is: $<?= round($results) ?></h5>
     </div>
