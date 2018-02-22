@@ -4,10 +4,10 @@
 
 ## Outside resources
 
-+https://getbootstrap.com
-+Stack Overflow - PHP Classes
-+Khan Academy www.khanacademy
-+PHP Documentation php.net/docs.php
++ https://getbootstrap.com
++ Stack Overflow - PHP Classes
++ Khan Academy www.khanacademy
++ PHP Documentation php.net/docs.php
 
 ## Code style divergences
 
