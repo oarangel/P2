@@ -28,7 +28,7 @@ require 'logic.php';
         <label>Enter Number of Persons:
             <input type='text' name='totalPer' value='<?= sanitize($totalPer) ?>' required>
         </label>
-        <p class='ex2'> Minimum number of persons is 2 and Maximun is 20</p>
+        <p class='ex2'> Minimum number of persons is 2 and Maximum is 20</p>
     </div>
 
     <div>
@@ -43,7 +43,7 @@ require 'logic.php';
         <p class='ex2'>if not selected, no Tip will be added </p>
     </div>
 
-    <input type='submit' value='Calculate' class='btn-sm btn-primary'>
+    <input type='submit' value='Calculate' class='btn btn-primary'>
 
 
 </form>
