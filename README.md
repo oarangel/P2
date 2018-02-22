@@ -13,4 +13,4 @@
 
 ## Notes for instructor
 
-+Form inputs limited to integers, no floating points included.
++ Form inputs limited to integers, no floating points included.
